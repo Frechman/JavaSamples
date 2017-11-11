@@ -1,10 +1,10 @@
 class Calculate{
 	public static void main(String[] args){
 		System.out.println("Calculate....");
-		
+
 		int first = Integer.valueOf(args[0]);
 		int second =  Integer.valueOf(args[1]) ;
-		
+
 		int summ = first + second;
 		int diff = first - second;
 		int mult = first * second;
@@ -12,10 +12,7 @@ class Calculate{
 		double devideSecondOnFirst = second / first;
 		double powFirst = first * first;
 		double powSecond = second * second;
-		
-		
-		
-		
+
 		System.out.println("summ = " + summ);
 		System.out.println("diff = " + diff);
 		System.out.println("mult = " + mult);
@@ -25,11 +22,10 @@ class Calculate{
 		System.out.println("powSecond = " + powSecond);
 		
 		int result = powFirstOnSecond(first, second);
-		System.out.println("Число " + first + " в степени " + second + " равно = " +result);
+		System.out.println("вЂћРёСЃР»Рѕ " + first + " РІ СЃС‚РµРїРµРЅРё " + second + " СЂР°РІРЅРѕ = " +result);
 		result = powerFirstToSecond(second, first);
-		System.out.println("Число " + second + " в степени " + first + " равно = " +result);
-		
-		
+		System.out.println("вЂћРёСЃР»Рѕ " + second + " РІ СЃС‚РµРїРµРЅРё " + first + " СЂР°РІРЅРѕ = " +result);
+
 	}
 	public static int powerFirstToSecond(int first, int second){
 		int result = 1;
@@ -37,13 +33,10 @@ class Calculate{
 			result*=first;
 		return result;
 	}
-	
-	
+
 	public static int powFirstOnSecond(int first, int second){
-		
 		if (second == 1) return first;
 		else 
 			return first *= powFirstOnSecond(first, second - 1);	
-		
 	}
 }
