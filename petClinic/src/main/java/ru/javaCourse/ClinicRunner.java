@@ -1,7 +1,7 @@
-package petClinic;
+package ru.javaCourse;
 
 /**
- * Класс запускает работу клиники
+ * Класс запускает работу клиники.
  */
 public class ClinicRunner {
 
@@ -18,11 +18,12 @@ public class ClinicRunner {
 
         clinic.addClient(4, new Client("Sergey", new CatDog(new Cat("PushokCat"), new Dog("DogPes"))));
 
-        Client client = new Client("Masha", new Dog("pet"));
+        Client client = new Client("Masha", new Dog("pe1t"));
+        Client client1 = new Client("alesha", new Cat("cat1123"));
         System.out.println(client.getPet().getClass().getSimpleName());
         System.out.println(client.getName());
         System.out.println(client.getPet().getName());
-        System.out.println(client.toString());
+        System.out.println(client1.toString());
         System.out.println(client.toString());
     }
 

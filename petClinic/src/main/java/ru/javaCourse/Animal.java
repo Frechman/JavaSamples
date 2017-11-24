@@ -1,22 +1,23 @@
-package petClinic;
+package ru.javaCourse;
 
-public abstract class Animal{
+public abstract class Animal {
 
     /**
-     * Издать звук
+     * Издать звук.
      */
     public abstract void makeSound();
 
     /**
-     * Поесть  .. добавить реализацию выбор корма
+     * Поесть  .. добавить реализацию выбор корма.
      */
     public void eat() {
         System.out.println("I'm eat...");
     }
 
     /**
-     * Спать
-     * @param minutes кол-во минут на сколько заснет питомец
+     * Спать.
+     *
+     * @param minutes кол-во минут на сколько заснет питомец.
      */
     public void sleep(int minutes) {
         System.out.println("I'm sleep " + minutes + " minutes.");

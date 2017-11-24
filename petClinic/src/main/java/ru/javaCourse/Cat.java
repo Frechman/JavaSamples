@@ -1,6 +1,6 @@
-package petClinic;
+package ru.javaCourse;
 
-public class Cat extends Animal implements Pet{
+public class Cat extends Animal implements Pet {
 
     private String name;
 
@@ -17,7 +17,7 @@ public class Cat extends Animal implements Pet{
     }
 
     /**
-     * Есть свой корм .. реализация еды
+     * Есть свой корм .. реализация еды, разновидность корма.
      */
     @Override
     public void eat() {
@@ -26,6 +26,7 @@ public class Cat extends Animal implements Pet{
 
     /**
      * Спать.
+     *
      * @param minutes кол-во минут на сколько заснет питомец.
      */
     @Override
@@ -34,16 +35,23 @@ public class Cat extends Animal implements Pet{
     }
 
     /**
-     * Имя питомца
-     * @return возвращает имя питомца
+     * Кличка питомца.
+     *
+     * @return возвращает кличку питомца.
      */
     @Override
     public String getName() {
         return this.name;
     }
 
+    /**
+     * Дать кличку домашнему питомцу.
+     *
+     * @param name кличка питомца.
+     */
     @Override
     public void setName(final String name) {
         this.name = name;
     }
+
 }

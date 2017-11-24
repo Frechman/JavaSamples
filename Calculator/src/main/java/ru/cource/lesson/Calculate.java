@@ -1,3 +1,5 @@
+package ru.cource.lesson;
+
 class Calculate {
     public static void main(String[] args) {
         System.out.println("Calculate....");

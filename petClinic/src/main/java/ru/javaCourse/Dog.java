@@ -1,6 +1,6 @@
-package petClinic;
+package ru.javaCourse;
 
-public class Dog extends Animal implements Pet{
+public class Dog extends Animal implements Pet {
 
     private String name;
 
@@ -9,7 +9,7 @@ public class Dog extends Animal implements Pet{
     }
 
     /**
-     * Собака лает
+     * Собака лает.
      */
     @Override
     public void makeSound() {
@@ -17,7 +17,7 @@ public class Dog extends Animal implements Pet{
     }
 
     /**
-     * Есть свой корм .. реализация еды
+     * Ест свой корм .. реализация еды.
      */
     @Override
     public void eat() {
@@ -25,8 +25,9 @@ public class Dog extends Animal implements Pet{
     }
 
     /**
-     * Спит
-     * @param minutes кол-во минут на сколько заснет питомец
+     * Спать.
+     *
+     * @param minutes кол-во минут на сколько заснет питомец.
      */
     @Override
     public void sleep(int minutes) {
@@ -34,8 +35,9 @@ public class Dog extends Animal implements Pet{
     }
 
     /**
-     * Имя питомца
-     * @return возвращает имя питомца
+     * Кличка питомца.
+     *
+     * @return возвращает кличку питомца.
      */
     @Override
     public String getName() {
@@ -43,8 +45,9 @@ public class Dog extends Animal implements Pet{
     }
 
     /**
-     * Изменить имя питомца
-     * @param name новая кличка питомца
+     * Дать кличку домашнему питомцу.
+     *
+     * @param name кличка питомца.
      */
     @Override
     public void setName(String name) {

@@ -1,3 +1,5 @@
+package ru.cource.lesson;
+
 import java.util.Scanner;
 
 /**
