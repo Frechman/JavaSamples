@@ -12,6 +12,11 @@ public class Calculator {
     private int result;
 
     /**
+     * Сохранен ли результат.
+     */
+    private boolean isSaveResult = false;
+
+    /**
      * Суммируем аргументы.
      *
      * @param params Аргументы суммирования.
@@ -27,8 +32,8 @@ public class Calculator {
      *
      * @param params Аргументы суммирования.
      */
-    public void diff(int... params) {
-        if (this.result != 0) {                  //Если результат сохранён
+    public void difference(int... params) {
+        if (isSaveResult) {                  //Если результат сохранён
             for (Integer param : params) {       //то вычитаем из результата
                 this.result -= param;
             }
@@ -46,8 +51,8 @@ public class Calculator {
      *
      * @param params Аргументы умножения.
      */
-    public void mult(int... params) {
-        if (this.result == 0) {
+    public void multiply(int... params) {
+        if (isSaveResult) {
             this.result = 1;
         }
         for (Integer param : params) {
@@ -74,8 +79,8 @@ public class Calculator {
                 }
                 this.result = tempResult;
             }
-        } catch (Exception ArithmeticException) {
-            System.out.println("Деление на нуль запрещено! / Divide by zero!");
+        } catch (ArithmeticException exp) {
+            System.out.println("Деление на нуль запрещено! / Divide by zero!" + exp);
             cleanResult();
         }
     }
@@ -101,6 +106,7 @@ public class Calculator {
      */
     public void cleanResult() {
         this.result = 0;
+        isSaveResult = false;
     }
 
     /**
@@ -112,13 +118,17 @@ public class Calculator {
                 add(firstNum, secondNum);
                 break;
             case "-":
-                diff(firstNum, secondNum);
+                difference(firstNum, secondNum);
                 break;
             case "*":
-                mult(firstNum, secondNum);
+                multiply(firstNum, secondNum);
                 break;
             case "/":
                 div(firstNum, secondNum);
+                break;
+            default:
+                System.out.println("Повторите ввод");
+                //валид метод
                 break;
         }
     }

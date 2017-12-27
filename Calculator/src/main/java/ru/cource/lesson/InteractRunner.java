@@ -12,8 +12,8 @@ public class InteractRunner {
     public static void main(String[] args) {
         try (Scanner reader = new Scanner(System.in)) {
             Calculator calc = new Calculator();
-            String userChoise = "no";
-            while (EXIT.equals(userChoise)) {
+            String userChoice = "yes";
+            while (!EXIT.equals(userChoice)) {
 
                 System.out.println("Enter first arg : ");
                 String first = reader.next();
@@ -29,12 +29,12 @@ public class InteractRunner {
                 System.out.println("Result : " + calc.getResult());
 
                 System.out.println("Do you save result and continue calculating? yes/no");
-                userChoise = reader.next();
-                if (EXIT.equals(userChoise)) {
+                userChoice = reader.next();
+                if (EXIT.equals(userChoice)) {
                     calc.cleanResult();
                     System.out.println("Would you like to exit? yes/no");
-                    userChoise = reader.next();
-                } // иначе продолжаем не очищая результат
+                    userChoice = reader.next();
+                }  // иначе продолжаем не очищая результат
             }
         }
     }

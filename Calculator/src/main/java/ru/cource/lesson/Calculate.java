@@ -7,39 +7,42 @@ class Calculate {
         int first = Integer.valueOf(args[0]);
         int second = Integer.valueOf(args[1]);
 
-        int summ = first + second;
-        int diff = first - second;
-        int mult = first * second;
-        double devideFirstOnSecond = first / second;
-        double devideSecondOnFirst = second / first;
+        int sum = first + second;
+        int difference = first - second;
+        int multiply = first * second;
+        double divideFirstOnSecond = first / second;
+        double divideSecondOnFirst = second / first;
         double powFirst = first * first;
         double powSecond = second * second;
 
-        System.out.println("summ = " + summ);
-        System.out.println("diff = " + diff);
-        System.out.println("mult = " + mult);
-        System.out.println("devideFirstOnSecond = " + devideFirstOnSecond);
-        System.out.println("devideSecondOnFirst = " + devideSecondOnFirst);
+        System.out.println("sum = " + sum);
+        System.out.println("difference = " + difference);
+        System.out.println("multiply = " + multiply);
+        System.out.println("divideFirstOnSecond = " + divideFirstOnSecond);
+        System.out.println("divideSecondOnFirst = " + divideSecondOnFirst);
         System.out.println("powFirst = " + powFirst);
         System.out.println("powSecond = " + powSecond);
 
         int result = powFirstOnSecond(first, second);
-        System.out.println("„исло " + first + " в степени " + second + " равно = " + result);
+        System.out.println("Число " + first + " в степени " + second + " равно = " + result);
         result = powerFirstToSecond(second, first);
-        System.out.println("„исло " + second + " в степени " + first + " равно = " + result);
+        System.out.println("Число " + second + " в степени " + first + " равно = " + result);
 
     }
 
     public static int powerFirstToSecond(int first, int second) {
         int result = 1;
-        for (int i = 0; i < second; i++)
+        for (int i = 0; i < second; i++) {
             result *= first;
+        }
         return result;
     }
 
     public static int powFirstOnSecond(int first, int second) {
-        if (second == 1) return first;
-        else
-            return first *= powFirstOnSecond(first, second - 1);
+        int result = 1;
+        if (second != 1) {
+            result *= powFirstOnSecond(first, second - 1);
+        }
+        return result;
     }
 }
