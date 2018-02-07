@@ -22,6 +22,7 @@
         <module>petClinic</module>
         <module>Exercises</module>
         <module>Exercises</module>
+        <module>learnJDBC</module>
     </modules>
 
     <dependencies>

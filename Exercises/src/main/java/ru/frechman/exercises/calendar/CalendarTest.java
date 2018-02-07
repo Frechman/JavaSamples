@@ -1,4 +1,4 @@
-package ru.frechman.exercises.Calendar;
+package ru.frechman.exercises.calendar;
 
 import java.time.DayOfWeek;
 import java.time.LocalDate;

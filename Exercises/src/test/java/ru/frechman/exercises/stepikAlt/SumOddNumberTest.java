@@ -1,4 +1,4 @@
-package ru.frechman.exercises.stepickAlt;
+package ru.frechman.exercises.stepikAlt;
 
 import org.junit.Test;
 
