@@ -23,6 +23,7 @@
         <module>Exercises</module>
         <module>Exercises</module>
         <module>learnJDBC</module>
+        <module>stepikWebServer</module>
     </modules>
 
     <dependencies>
