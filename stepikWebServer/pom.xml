@@ -47,7 +47,7 @@
                     <appendAssemblyId>false</appendAssemblyId>
                     <archive>
                         <manifest>
-                            <mainClass>ru.frenchman.stepikwebserver.Main</mainClass>
+                            <mainClass>ru.frenchman.Main</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

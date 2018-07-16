@@ -19,9 +19,8 @@
     <modules>
         <module>Calculator</module>
         <module>CalculatorPatternState</module>
+        <module>Exercises</module>
         <module>petClinic</module>
-        <module>Exercises</module>
-        <module>Exercises</module>
         <module>learnJDBC</module>
         <module>stepikWebServer</module>
     </modules>
@@ -45,7 +44,7 @@
 
     <build>
         <plugins>
-            <plugin>
+            <!--<plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-checkstyle-plugin</artifactId>
                 <version>2.17</version>
@@ -58,16 +57,14 @@
                             <encoding>UTF-8</encoding>
                             <consoleOutput>true</consoleOutput>
                             <failsOnError>true</failsOnError>
-                            <!--<linkXRef>false</linkXRef>-->
+                            &lt;!&ndash;<linkXRef>false</linkXRef>&ndash;&gt;
                         </configuration>
                         <goals>
                             <goal>check</goal>
                         </goals>
                     </execution>
                 </executions>
-
-            </plugin>
-
+            </plugin>-->
         </plugins>
     </build>
 </project>
