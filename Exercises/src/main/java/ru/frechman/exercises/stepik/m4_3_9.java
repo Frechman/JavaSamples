@@ -9,27 +9,27 @@ public class m4_3_9 {
     public static final String WEAPONS = "weapons";
     public static final String BANNED_SUBSTANCE = "banned substance";
 
-    /*
-    Интерфейс: сущность, которую можно отправить по почте.
-    У такой сущности можно получить от кого и кому направляется письмо.
-    */
+    /**
+     * Интерфейс: сущность, которую можно отправить по почте.
+     * У такой сущности можно получить от кого и кому направляется письмо.
+     */
     public static interface Sendable {
         String getFrom();
 
         String getTo();
     }
 
-    /*
-    Интерфейс, который задает класс, который может каким-либо образом обработать почтовый объект.
-    */
+    /**
+     * Интерфейс, который задает класс, который может каким-либо образом обработать почтовый объект.
+     */
     public static interface MailService {
         Sendable processMail(Sendable mail);
     }
 
-    /*
-        Абстрактный класс,который позволяет абстрагировать логику хранения
-        источника и получателя письма в соответствующих полях класса.
-    */
+    /**
+     * Абстрактный класс,который позволяет абстрагировать логику хранения
+     * источника и получателя письма в соответствующих полях класса.
+     */
     public static abstract class AbstractSendable implements Sendable {
 
         protected final String from;
@@ -65,9 +65,9 @@ public class m4_3_9 {
 
     }
 
-    /*
-    Письмо, у которого есть текст, который можно получить с помощью метода `getMessage`
-    */
+    /**
+     * Письмо, у которого есть текст, который можно получить с помощью метода `getMessage`
+     */
     public static class MailMessage extends AbstractSendable {
 
         private final String message;
@@ -96,9 +96,9 @@ public class m4_3_9 {
 
     }
 
-    /*
-    Посылка, содержимое которой можно получить с помощью метода `getContent`
-    */
+    /**
+     * Посылка, содержимое которой можно получить с помощью метода `getContent`
+     */
     public static class MailPackage extends AbstractSendable {
         private final Package content;
 
@@ -123,12 +123,12 @@ public class m4_3_9 {
 
             return true;
         }
-
     }
 
-    /*
-    Класс, который задает посылку. У посылки есть текстовое описание содержимого и целочисленная ценность.
-    */
+    /**
+     * Класс, который задает посылку.
+     * У посылки есть текстовое описание содержимого и целочисленная ценность.
+     */
     public static class Package {
         private final String content;
         private final int price;
@@ -160,9 +160,9 @@ public class m4_3_9 {
         }
     }
 
-    /*
-    Класс, в котором скрыта логика настоящей почты
-    */
+    /**
+     * Класс, в котором скрыта логика настоящей почты
+     */
     public static class RealMailService implements MailService {
 
         @Override
@@ -195,7 +195,6 @@ public class m4_3_9 {
         }
 
         public RealMailService getRealMailService() {
-
             return realMailService;
         }
 

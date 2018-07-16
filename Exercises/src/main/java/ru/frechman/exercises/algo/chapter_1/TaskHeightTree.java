@@ -12,7 +12,7 @@ public class TaskHeightTree {
         for (int i = 0; i < length; i++) {
             arr[i] = sc.nextInt();
         }
-
+        // TODO:
         System.out.println(length);
         System.out.println(Arrays.toString(arr));
     }

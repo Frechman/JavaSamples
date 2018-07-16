@@ -13,6 +13,5 @@ public class m5_2_8 {
             checkSum = Integer.rotateLeft(checkSum, 1) ^ buff;
         }
         return checkSum;
-
     }
 }

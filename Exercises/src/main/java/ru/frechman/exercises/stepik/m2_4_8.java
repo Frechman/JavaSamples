@@ -19,7 +19,5 @@ public class m2_4_8 {
             ret = ret.multiply(BigInteger.valueOf(i));
         }
         return ret;
-
-        // your implementation here
     }
 }

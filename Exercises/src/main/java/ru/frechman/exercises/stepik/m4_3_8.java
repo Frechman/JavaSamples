@@ -17,6 +17,5 @@ public class m4_3_8 {
         consoleHandler.setFormatter(new XMLFormatter());
         LOGGER3.addHandler(consoleHandler);
         LOGGER3.setUseParentHandlers(false);
-
     }
 }

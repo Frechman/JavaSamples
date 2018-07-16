@@ -6,7 +6,6 @@ import static org.junit.Assert.assertEquals;
 
 public class TaskCheckBracketsTest {
 
-
     @Test
     public void chek10() {
         String actual = TaskCheckBrackets.checkBrackets("{{");

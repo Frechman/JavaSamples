@@ -24,13 +24,11 @@ public class MkadTest {
     @Test
     public void test2() {
         assertEquals(0, Mkad.getDistance(109, 1));
-
     }
 
     @Test
     public void test3() {
         assertEquals(0, Mkad.getDistance(109, 10));
-
     }
 
     @Test

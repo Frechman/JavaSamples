@@ -11,7 +11,6 @@ public class Test {
         System.out.println(sumOfRecursive(2));
     }
 
-
     public static int sumOfRecursive(int n) {
         if (n == 0) {
             return 0;

@@ -10,17 +10,13 @@ public class m2_4_9 {
      *
      * @param a1 first sorted array
      * @param a2 second sorted array
-     * @return new array containing all elements from a1 and a2, sorted
+     * @return new sorted array containing all elements from a1 and a2
      */
     public static int[] mergeArrays(int[] a1, int[] a2) {
         int[] result = new int[a1.length + a2.length];
         int i = 0, j = 0;
         for (int k = 0; k < result.length; k++) {
 
-            //думаю, почти не читаемая запись (просто результат сокращения )
-            //result[k] = (i > a1.length - 1) ? a2[j++] : (result[k] = (j > a2.length - 1) ? a1[i++] : (result[k] = (a1[i] < a2[j]) ? a1[i++] : a2[j++]));
-
-            //более удобно читаемый вариант
             if (i > a1.length - 1) {
                 result[k] = a2[j++];
             } else if (j > a2.length - 1) {
@@ -46,5 +42,4 @@ public class m2_4_9 {
         }
         return result;
     }
-
 }

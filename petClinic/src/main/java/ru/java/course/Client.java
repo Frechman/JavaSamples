@@ -5,7 +5,6 @@ public class Client {
     private String name;
     private Pet pet;
 
-
     public Client(String name, Pet pet) {
         this.name = name;
         this.pet = pet;

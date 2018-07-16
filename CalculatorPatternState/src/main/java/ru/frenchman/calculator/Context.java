@@ -43,7 +43,6 @@ public class Context {
         }
     }
 
-
     public int run(String keys) { //"C2+3="
         for (char key : keys.toCharArray()) {
             press(key);
