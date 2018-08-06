@@ -1,4 +1,4 @@
-package ru.frechman.exercises.otherTasks;
+package ru.frechman.exercises.other_tasks;
 
 import org.junit.Test;
 

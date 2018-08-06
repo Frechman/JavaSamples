@@ -1,4 +1,4 @@
-package model;
+package ru.frenchman.model;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -22,12 +22,10 @@ public class User implements Serializable {
     }
 
     public User(String login) {
-
         this.login = login;
     }
 
     public User(String login, String password) {
-
         this.login = login;
         this.password = password;
     }
@@ -54,5 +52,14 @@ public class User implements Serializable {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", login='" + login + '\'' +
+                ", password='" + password + '\'' +
+                '}';
     }
 }

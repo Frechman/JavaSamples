@@ -1,22 +1,24 @@
+package ru.frenchman;
+
 import org.eclipse.jetty.server.Handler;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.handler.HandlerList;
 import org.eclipse.jetty.server.handler.ResourceHandler;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
-import service.AccountService;
-import servlets.SignInServlet;
-import servlets.SignUpServlet;
+import ru.frenchman.service.UserService;
+import ru.frenchman.servlets.SignInServlet;
+import ru.frenchman.servlets.SignUpServlet;
 
 public class Main {
 
     public static void main(String[] args) throws Exception {
 
-        final AccountService accountService = new AccountService(usersRepository);
+        final UserService userService = new UserService();
 
         ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
-        context.addServlet(new ServletHolder(new SignInServlet(accountService)), "/signin");
-        context.addServlet(new ServletHolder(new SignUpServlet(accountService)), "/signup");
+        context.addServlet(new ServletHolder(new SignInServlet(userService)), "/signin");
+        context.addServlet(new ServletHolder(new SignUpServlet(userService)), "/signup");
 
         ResourceHandler resourceHandler = new ResourceHandler();
         resourceHandler.setResourceBase("resources");

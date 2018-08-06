@@ -3,12 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <title>StepikWebServer</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 </head>
 <body>
 
-<form>
-    <input>
+<h3>Hello People!</h3>
+
+<form class="form-horizontal" action="/signup">
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="Login">Login:</label>
+        <div class="col-sm-2">
+            <input type="Login" class="form-control" id="Login" placeholder="Enter Login">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="pwd">Password:</label>
+        <div class="col-sm-2">
+            <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <div class="checkbox">
+                <label><input type="checkbox"> Remember me</label>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-default">Submit</button>
+        </div>
+    </div>
 </form>
+<!--
+
+<form method="post">
+    <fieldset>
+        <legend>SignUp</legend>
+        <label>Login:</label><input type="text">
+        <label>Password:</label><input type="password">
+    </fieldset>
+    <input type="submit" value="SignUp" formaction="/signup">
+    <input type="submit" value="SignIn" formaction="/signin">
+</form>
+-->
 
 </body>
 </html>

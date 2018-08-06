@@ -1,6 +1,5 @@
 package ru.frechman.exercises.stepik;
 
-
 enum Label {
     SPAM, NEGATIVE_TEXT, TOO_LONG, OK
 }
@@ -13,7 +12,6 @@ public class m3_5_9 {
 
     public Label checkLabels(TextAnalyzer[] analyzers, String text) {
 
-
         for (TextAnalyzer lyzers : analyzers
                 ) {
             if (lyzers.processText(text) != Label.OK) {
@@ -21,12 +19,9 @@ public class m3_5_9 {
             }
         }
         return Label.OK;
-
     }
 
-
     abstract class KeywordAnalyzer implements TextAnalyzer {
-
 
         @Override
         public Label processText(String text) {
@@ -64,9 +59,7 @@ public class m3_5_9 {
 
     }
 
-
     class NegativeTextAnalyzer extends KeywordAnalyzer {
-
 
         public NegativeTextAnalyzer() { // конструктор по умолчанию
         }
@@ -97,7 +90,6 @@ public class m3_5_9 {
             }
             return Label.OK;
         }
-
     }
 
 }

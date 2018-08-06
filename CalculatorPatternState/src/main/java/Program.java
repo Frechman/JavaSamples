@@ -9,8 +9,7 @@ public class Program {
         while (true) {
             char key = (char) System.in.read();
 
-            if (key >= ' ') {  //чтобы клавиша enter пропустить
-
+            if (key >= ' ') {  //чтобы клавишу enter пропустить
                 calc.press(key);
                 System.out.println(calc);
             }

@@ -1,7 +1,7 @@
-package servlets;
+package ru.frenchman.servlets;
 
-import model.User;
-import service.AccountService;
+import ru.frenchman.model.User;
+import ru.frenchman.service.UserService;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -11,23 +11,23 @@ import java.io.IOException;
 
 public class SignInServlet extends HttpServlet {
 
-    private final AccountService accountService;
+    private final UserService userService;
 
-    public SignInServlet(AccountService accountService) {
-        this.accountService = accountService;
+    public SignInServlet(UserService userService) {
+        this.userService = userService;
     }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doGet(req, resp);
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String login = req.getParameter("login");
         String password = req.getParameter("password");
+
         if (login != null && password != null) {
-            User foundUser = accountService.getUserByLogin(login);
+            User foundUser = userService.getUserByLogin(login);
             if (foundUser != null) {
                 String signInLogin = foundUser.getLogin();
                 String signInPass = foundUser.getPassword();

@@ -12,7 +12,6 @@ public class TaskCheckBrackets {
         System.out.println(checkBrackets(str));
     }
 
-
     static String checkBrackets(String str) {
         Stack<Character> stack = new Stack<>();
         Stack<Integer> num = new Stack<>();
@@ -36,7 +35,6 @@ public class TaskCheckBrackets {
                     || (top == '{' && arraySrt[i] != '}')) {
                 return String.valueOf(i + 1);
             }
-
         }
         return stack.empty() ? SUCCESS : String.valueOf(num.pop() + 1);
     }

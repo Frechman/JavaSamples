@@ -13,7 +13,7 @@ public class m2_3_10 {
      */
     public static boolean isPalindrome(String text) {
         text = text.replaceAll("[^A-Za-zА-Яа-я0-9]", "");
-        return text.equalsIgnoreCase(new StringBuilder(text).reverse().toString()); // your imp
-        // lementation here
+        String reverseText = new StringBuilder(text).reverse().toString();
+        return text.equalsIgnoreCase(reverseText);
     }
 }

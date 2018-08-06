@@ -10,6 +10,5 @@ public class m6_3_8 {
             Function<? super T, ? extends U> ifFalse) {
 
         return (x) -> condition.test(x) ? ifTrue.apply(x) : ifFalse.apply(x);
-
     }
 }

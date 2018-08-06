@@ -13,7 +13,6 @@ public class Main {
         );
     }
 
-
     public <T extends Human & ISinger> void sing(T pevec) {
         System.out.printf("%s Sing for you: ", pevec.getName());
         pevec.sing();

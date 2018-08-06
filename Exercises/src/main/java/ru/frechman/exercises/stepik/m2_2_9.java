@@ -12,6 +12,6 @@ public class m2_2_9 {
      * @return <code>true</code> when <code>value</code> is power of two, <code>false</code> otherwise
      */
     public static boolean isPowerOfTwo(int value) {
-        return Integer.bitCount(Math.abs(value)) == 1; // you implementation here
+        return Integer.bitCount(Math.abs(value)) == 1;
     }
 }

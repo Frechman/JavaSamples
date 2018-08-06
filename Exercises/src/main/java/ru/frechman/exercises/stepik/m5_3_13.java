@@ -13,7 +13,6 @@ public class m5_3_13 {
         while (sc.hasNext()) {
             try {
                 sum += Double.parseDouble(sc.next());
-
             } catch (Exception e) {
             }
         }
