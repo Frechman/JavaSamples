@@ -59,12 +59,12 @@
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-server</artifactId>
-            <version>${org.eclipse.jetty.version}</version>
+            <version>9.4.8.v20171121</version>
         </dependency>
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-webapp</artifactId>
-            <version>${org.eclipse.jetty.version}</version>
+            <version>9.4.8.v20171121</version>
         </dependency>
         <dependency>
             <groupId>org.freemarker</groupId>
